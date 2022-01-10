@@ -16,6 +16,7 @@ public class Consumer {
     @Topic("my-calculator")
     @Async
     public void receive(JsonObject message) {
+        System.out.println("Kafka Consumer");
         double a = message.getDouble("a");
         double b = message.getDouble("b");
         String ope = message.getString("ope");

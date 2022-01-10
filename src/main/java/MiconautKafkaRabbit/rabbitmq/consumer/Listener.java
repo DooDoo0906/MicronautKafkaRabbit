@@ -20,8 +20,8 @@ public class Listener {
     List<String> messageLengths = Collections.synchronizedList(new ArrayList<>());
 
     @Queue("demoRabbiMQ")
-    @Async
     public void receive(JsonObject message) {
+        System.out.println("RabbitMQ Listener");
         double a = message.getDouble("a");
         double b = message.getDouble("b");
         String ope = message.getString("ope");
