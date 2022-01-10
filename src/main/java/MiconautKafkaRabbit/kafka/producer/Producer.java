@@ -9,8 +9,6 @@ import jakarta.inject.Singleton;
 
 @KafkaClient
 @Singleton
-@Bean
-
 public interface Producer {
     @Topic("my-calculator")
     @Async

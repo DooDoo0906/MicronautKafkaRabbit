@@ -9,8 +9,6 @@ import jakarta.inject.Singleton;
 
 @RabbitClient
 @Singleton
-@Bean
-
 public interface Client {
 
     @Binding("demoRabbiMQ")
