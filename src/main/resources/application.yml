@@ -1,3 +1,10 @@
 micronaut:
+  executors:
+    consumer:
+      type: FIXED
   application:
     name: miconautKafkaRabbit
+
+kafka:
+  bootstrap:
+    servers: localhost:9092

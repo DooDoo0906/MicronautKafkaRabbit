@@ -16,9 +16,10 @@ public class Application {
         message.put("b",10);
         message.put("ope",":");
         ApplicationContext context=Micronaut.run(Application.class, args);
+        System.out.println(context.getBean(Client.class));
         productClient = context.getBean(Client.class);
-        producer=context.getBean(Producer.class);
         productClient.send(message);
+        producer=context.getBean(Producer.class);
         producer.sendProduct(message);
     }
 }
