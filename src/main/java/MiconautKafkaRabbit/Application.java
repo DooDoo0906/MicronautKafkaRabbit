@@ -21,5 +21,6 @@ public class Application {
         productClient.send(message);
         producer=context.getBean(Producer.class);
         producer.sendProduct(message);
+
     }
 }

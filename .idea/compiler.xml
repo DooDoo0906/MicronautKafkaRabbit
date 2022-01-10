@@ -42,12 +42,14 @@
           <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-router/3.2.3/micronaut-router-3.2.3.jar" />
         </processorPath>
         <module name="MiconautKafkaRabbit" />
+        <module name="MicronautKafkaRabbit" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="MiconautKafkaRabbit" options="-parameters -Amicronaut.processing.group=MiconautKafkaRabbit -Amicronaut.processing.module=MiconautKafkaRabbit" />
+      <module name="MicronautKafkaRabbit" options="-parameters -Amicronaut.processing.group=MiconautKafkaRabbit -Amicronaut.processing.module=MiconautKafkaRabbit" />
     </option>
   </component>
 </project>

@@ -21,14 +21,12 @@ public class Listener {
 
     @Queue("demoRabbiMQ")
     public void receive(JsonObject message) {
-        System.out.println("RabbitMQ Listener");
+
         double a = message.getDouble("a");
         double b = message.getDouble("b");
         String ope = message.getString("ope");
-        System.out.println("Value: ");
-        System.out.println(message.encodePrettily());
         if (Validation.canOperate(a,b,ope)) {
-            System.out.println("Result: " + Calculator.calculate(a, b, ope));
+            System.out.println("RabbitMQ Result: " + Calculator.calculate(a, b, ope));
         }
     }
 
